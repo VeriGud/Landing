@@ -32,7 +32,7 @@ function App() {
   const selectedAlgo = algorithms.find(algo => algo.name === selectedAlgorithm)!;
 
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-oxocarbon-base00 text-oxocarbon-base05">
       <Header viewMode={viewMode} setViewMode={setViewMode} />
 
       <main className="max-w-7xl mx-auto px-4 py-8 sm:px-6 lg:px-8">
@@ -40,7 +40,7 @@ function App() {
 
         <div className="relative mb-8">
           <LoadingOverlay isLoading={isLoading} progress={progress} />
-          <div className="bg-white p-1 rounded-xl shadow-sm">
+          <div className="bg-oxocarbon-base01 p-1 rounded-xl shadow-lg">
             <canvas
               id="canvas"
               className="w-full aspect-video rounded-lg cursor-crosshair"
@@ -57,7 +57,7 @@ function App() {
           />
         )}
 
-        <div className="bg-white rounded-lg shadow">
+        <div className="bg-oxocarbon-base01 rounded-lg shadow-lg">
           <div className="p-6">
             {viewMode === 'comparison' ? (
               <ComparisonView />

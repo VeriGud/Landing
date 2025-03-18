@@ -7,9 +7,9 @@ interface StatusTagProps {
 
 export function StatusTag({ status }: StatusTagProps) {
   const colors = {
-    stable: "bg-green-100 text-green-800",
-    beta: "bg-yellow-100 text-yellow-800",
-    experimental: "bg-red-100 text-red-800"
+    stable: "bg-oxocarbon-base0D text-oxocarbon-base00",
+    beta: "bg-oxocarbon-base0A text-oxocarbon-base00",
+    experimental: "bg-oxocarbon-base0C text-oxocarbon-base00"
   };
 
   return (

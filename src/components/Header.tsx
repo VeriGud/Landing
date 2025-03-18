@@ -8,20 +8,20 @@ interface HeaderProps {
 
 export function Header({ viewMode, setViewMode }: HeaderProps) {
   return (
-    <header className="bg-white shadow-sm">
+    <header className="bg-oxocarbon-base01 shadow-lg">
       <div className="max-w-7xl mx-auto px-4 py-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between">
-          <h1 className="text-2xl font-bold text-gray-900">
+          <h1 className="text-2xl font-bold text-oxocarbon-base05">
             Algorithm Visualizer
           </h1>
           <div className="flex items-center gap-4">
             <div className="flex rounded-lg overflow-hidden">
               <button
                 onClick={() => setViewMode('card')}
-                className={`px-4 py-2 text-sm font-medium inline-flex items-center gap-2 ${
+                className={`px-4 py-2 text-sm font-medium inline-flex items-center gap-2 transition-colors ${
                   viewMode === 'card'
-                    ? 'bg-gray-800 text-white'
-                    : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
+                    ? 'bg-oxocarbon-base0B text-oxocarbon-base00'
+                    : 'bg-oxocarbon-base02 text-oxocarbon-base04 hover:bg-oxocarbon-base01'
                 }`}
                 title="Show algorithms in card format"
               >
@@ -30,10 +30,10 @@ export function Header({ viewMode, setViewMode }: HeaderProps) {
               </button>
               <button
                 onClick={() => setViewMode('comparison')}
-                className={`px-4 py-2 text-sm font-medium inline-flex items-center gap-2 ${
+                className={`px-4 py-2 text-sm font-medium inline-flex items-center gap-2 transition-colors ${
                   viewMode === 'comparison'
-                    ? 'bg-gray-800 text-white'
-                    : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
+                    ? 'bg-oxocarbon-base0B text-oxocarbon-base00'
+                    : 'bg-oxocarbon-base02 text-oxocarbon-base04 hover:bg-oxocarbon-base01'
                 }`}
                 title="Compare algorithms side by side"
               >
@@ -45,7 +45,7 @@ export function Header({ viewMode, setViewMode }: HeaderProps) {
               href="https://github.com"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md text-white bg-gray-800 hover:bg-gray-700"
+              className="inline-flex items-center px-4 py-2 text-sm font-medium rounded-md text-oxocarbon-base00 bg-oxocarbon-base0E hover:bg-opacity-90 transition-colors"
             >
               <Github className="h-5 w-5 mr-2" />
               View Source

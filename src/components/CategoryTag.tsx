@@ -7,9 +7,9 @@ interface CategoryTagProps {
 
 export function CategoryTag({ category }: CategoryTagProps) {
   const colors = {
-    graph: "bg-purple-100 text-purple-800",
-    search: "bg-blue-100 text-blue-800",
-    sorting: "bg-orange-100 text-orange-800"
+    graph: "bg-oxocarbon-base0E text-oxocarbon-base00",
+    search: "bg-oxocarbon-base09 text-oxocarbon-base00",
+    sorting: "bg-oxocarbon-base08 text-oxocarbon-base00"
   };
 
   return (

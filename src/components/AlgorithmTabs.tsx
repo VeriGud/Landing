@@ -11,8 +11,8 @@ interface AlgorithmTabsProps {
 
 export function AlgorithmTabs({ algorithms, selectedAlgorithm, setSelectedAlgorithm }: AlgorithmTabsProps) {
   return (
-    <div className="bg-white rounded-lg shadow mb-6">
-      <div className="border-b border-gray-200">
+    <div className="bg-oxocarbon-base01 rounded-lg shadow-lg mb-6">
+      <div className="border-b border-oxocarbon-base03">
         <nav className="flex -mb-px">
           {algorithms.map((algo) => (
             <button
@@ -20,8 +20,8 @@ export function AlgorithmTabs({ algorithms, selectedAlgorithm, setSelectedAlgori
               className={`
                 whitespace-nowrap py-4 px-6 border-b-2 font-medium text-sm
                 ${selectedAlgorithm === algo.name
-                  ? 'border-blue-500 text-blue-600'
-                  : 'border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300'
+                  ? 'border-oxocarbon-base0B text-oxocarbon-base0B bg-oxocarbon-base02'
+                  : 'border-transparent text-oxocarbon-base04 hover:text-oxocarbon-base05 hover:border-oxocarbon-base03'
                 }
               `}
               onClick={() => setSelectedAlgorithm(algo.name)}
