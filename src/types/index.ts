@@ -1,6 +1,7 @@
 export interface Algorithm {
   name: string;
   description: string;
+  simpleExplanation: string;
   timeComplexity: string;
   spaceComplexity: string;
   status: 'stable' | 'beta' | 'experimental';
@@ -15,4 +16,11 @@ export interface Algorithm {
     details: string[];
   }>;
   implementations: string[];
+  performance: {
+    averageCase: string;
+    bestCase: string;
+    worstCase: string;
+    spaceUsage: string;
+    realWorldUsage: string[];
+  };
 }

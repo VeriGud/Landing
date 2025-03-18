@@ -4,6 +4,7 @@ export const algorithms: Algorithm[] = [
   {
     name: "A* (A-Star)",
     description: "A* combines Dijkstra's algorithm with heuristic estimation of distances. It intelligently explores paths that seem most promising, making it highly efficient for pathfinding with obstacles.",
+    simpleExplanation: "Think of finding your way through a crowded mall. A* is like having a smart GPS that looks at both how far you've walked AND how far you still need to go. It tries to pick the path that looks most promising, just like how you might head toward a visible store sign even if you have to walk around some obstacles.",
     timeComplexity: "O(b^d)",
     spaceComplexity: "O(b^d)",
     status: "stable",
@@ -45,11 +46,24 @@ export const algorithms: Algorithm[] = [
         ]
       }
     ],
-    implementations: ["C++", "Python", "JavaScript", "Java", "Rust"]
+    implementations: ["C++", "Python", "JavaScript", "Java", "Rust"],
+    performance: {
+      averageCase: "Usually faster than Dijkstra's for most practical scenarios",
+      bestCase: "Direct path to goal with perfect heuristic",
+      worstCase: "May explore entire graph with poor heuristic",
+      spaceUsage: "High - stores all visited nodes and paths",
+      realWorldUsage: [
+        "Video game pathfinding",
+        "Robot navigation",
+        "GPS routing systems",
+        "Network packet routing"
+      ]
+    }
   },
   {
     name: "Dijkstra's Algorithm",
     description: "Dijkstra's algorithm finds the shortest path between nodes in a graph by maintaining a set of unvisited nodes and continuously updating distance values as it explores.",
+    simpleExplanation: "Imagine you're delivering packages and want the shortest route. Dijkstra's algorithm is like checking the distance of EVERY possible road from your current spot, always picking the shortest one available. It's slow but thorough - like someone who refuses to take shortcuts because they want to be 100% sure they're taking the absolute shortest path.",
     timeComplexity: "O((V + E)\\log V)",
     spaceComplexity: "O(V)",
     status: "stable",
@@ -91,11 +105,24 @@ export const algorithms: Algorithm[] = [
         ]
       }
     ],
-    implementations: ["C++", "Python", "JavaScript", "Java", "Go"]
+    implementations: ["C++", "Python", "JavaScript", "Java", "Go"],
+    performance: {
+      averageCase: "Efficient for small to medium graphs",
+      bestCase: "Direct path to target node",
+      worstCase: "Must explore entire graph",
+      spaceUsage: "Moderate - stores distances and visited nodes",
+      realWorldUsage: [
+        "Network routing protocols",
+        "Social networks",
+        "Geographic maps",
+        "Traffic navigation systems"
+      ]
+    }
   },
   {
     name: "Depth First Search",
     description: "DFS explores a graph by going as deep as possible along each branch before backtracking. It uses a stack (or recursion) to keep track of nodes to visit.",
+    simpleExplanation: "Think of exploring a big office building looking for someone. DFS is like picking one hallway and following it all the way to the end before going back. If you pick the 3rd floor north hallway, you'll check every single room on that path before trying a different hallway. It's like being stubborn about finishing one complete path before trying another.",
     timeComplexity: "O(V + E)",
     spaceComplexity: "O(V)",
     status: "stable",
@@ -137,11 +164,24 @@ export const algorithms: Algorithm[] = [
         ]
       }
     ],
-    implementations: ["Python", "JavaScript", "Java", "C++", "Ruby"]
+    implementations: ["Python", "JavaScript", "Java", "C++", "Ruby"],
+    performance: {
+      averageCase: "Fast for deep graphs and tree structures",
+      bestCase: "Target found in first deep path",
+      worstCase: "Must explore all paths to maximum depth",
+      spaceUsage: "Low - only stores current path",
+      realWorldUsage: [
+        "Maze solving",
+        "Game tree exploration",
+        "Web crawling",
+        "File system traversal"
+      ]
+    }
   },
   {
     name: "Breadth First Search",
     description: "BFS explores a graph level by level, visiting all nodes at the current depth before moving to nodes at the next depth level. It uses a queue to track nodes to visit.",
+    simpleExplanation: "Imagine searching a parking lot for your car. BFS is like checking every spot in the row you're on before moving to the next row. You won't move to row 2 until you've checked EVERY spot in row 1. It's methodical and thorough, like someone who absolutely refuses to skip ahead because they don't want to miss anything close by.",
     timeComplexity: "O(V + E)",
     spaceComplexity: "O(V)",
     status: "stable",
@@ -183,11 +223,24 @@ export const algorithms: Algorithm[] = [
         ]
       }
     ],
-    implementations: ["Python", "JavaScript", "Java", "C++", "Go"]
+    implementations: ["Python", "JavaScript", "Java", "C++", "Go"],
+    performance: {
+      averageCase: "Efficient for shallow solutions",
+      bestCase: "Target found in first level",
+      worstCase: "Must explore all levels",
+      spaceUsage: "High - stores all nodes at current level",
+      realWorldUsage: [
+        "Social network connections",
+        "Peer-to-peer networks",
+        "GPS navigation",
+        "Web crawling"
+      ]
+    }
   },
   {
     name: "Greedy Best-First Search",
     description: "A heuristic search algorithm that always chooses the path that appears to be closest to the goal. Unlike A*, it only considers the estimated cost to the goal, ignoring the cost of the path so far.",
+    simpleExplanation: "Picture trying to get to a bathroom in an emergency. Greedy Best-First Search is like someone who just runs straight toward the bathroom sign they can see, even if it means going through a crowded restaurant or climbing stairs. They don't care if there's an easier path through the empty hallway - they just go wherever looks closest to their goal right now!",
     timeComplexity: "O(b^d)",
     spaceComplexity: "O(b^d)",
     status: "stable",
@@ -229,6 +282,18 @@ export const algorithms: Algorithm[] = [
         ]
       }
     ],
-    implementations: ["Python", "C++", "Java", "JavaScript", "Go"]
+    implementations: ["Python", "C++", "Java", "JavaScript", "Go"],
+    performance: {
+      averageCase: "Fast but may miss optimal solutions",
+      bestCase: "Direct path to goal matches heuristic",
+      worstCase: "Gets stuck in local minima",
+      spaceUsage: "Moderate - stores frontier nodes",
+      realWorldUsage: [
+        "Game AI decision making",
+        "Real-time pathfinding",
+        "Resource allocation",
+        "Puzzle solving"
+      ]
+    }
   }
 ];
